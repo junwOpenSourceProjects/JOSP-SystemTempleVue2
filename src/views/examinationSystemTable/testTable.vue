@@ -94,8 +94,8 @@
       <!--  </template>-->
       <!--</el-table-column>-->
       <el-table-column
-        prop="rank"
-        label="初试排名"
+        type="index"
+        label="序号"
         width="120px"
         sortable
         align="center"
@@ -141,14 +141,14 @@
       <el-table-column
         prop="scoreProfessional1"
         label="专业课一"
-        width="80px"
+        width="120px"
         sortable
         align="center"
       />
       <el-table-column
         prop="scoreProfessional2"
         label="专业课二"
-        width="80px"
+        width="120px"
         sortable
         align="center"
       />
@@ -161,36 +161,36 @@
       />
       <el-table-column
         prop="rank"
-        label="排名"
-        width="80px"
+        label="初试排名"
+        width="120px"
         sortable
         align="center"
       />
       <el-table-column
         prop="scoreTotalPublic"
         label="公共课总分"
-        width="100px"
+        width="120px"
         sortable
         align="center"
       />
       <el-table-column
         prop="scoreTotalProfessional"
         label="专业课总分"
-        width="100px"
+        width="120px"
         sortable
         align="center"
       />
       <el-table-column
         prop="hgyRank"
         label="红果研"
-        width="100px"
+        width="120px"
         sortable
         align="center"
       />
       <el-table-column
         prop="kyBoxRank"
         label="考研盒子"
-        width="100px"
+        width="120px"
         sortable
         align="center"
       />
@@ -218,7 +218,7 @@
       <!--    </el-tag>-->
       <!--  </template>-->
       <!--</el-table-column>-->
-      <el-table-column :label="$t('table.actions')" align="center" width="200px" class-name="small-padding fixed-width">
+      <el-table-column :label="$t('table.actions')" align="center" width="280px" class-name="small-padding fixed-width">
         <template slot-scope="{row,$index}">
           <el-button type="primary" size="mini" @click="handleUpdate(row)">
             {{ $t('table.edit') }}
@@ -234,8 +234,11 @@
           <!--<el-button v-if="row.status!='draft'" size="mini" @click="handleModifyStatus(row,'draft')">-->
           <!--  {{ $t('table.draft') }}-->
           <!--</el-button>-->
+          <el-button v-if="row.status!='deleted'" size="mini" type="default" @click="handleDelete(row,$index)">
+            {{ '隐藏' }}
+          </el-button>
           <el-button v-if="row.status!='deleted'" size="mini" type="danger" @click="handleDelete(row,$index)">
-            {{ $t('table.delete') }}
+            {{ '删除' }}
           </el-button>
         </template>
       </el-table-column>
@@ -333,7 +336,7 @@
 </template>
 
 <script>
-import { fetchMergeDatabaseList, fetchPv, createArticle, updateArticle } from '@/api/article'
+import { fetchMergeDatabaseList,  createArticle, updateArticle } from '@/api/article'
 import waves from '@/directive/waves' // waves directive
 import { parseTime } from '@/utils'
 import Pagination from '@/components/Pagination' // secondary package based on el-pagination
@@ -432,13 +435,13 @@ export default {
       this.listQuery.page = 1
       this.getList()
     },
-    handleModifyStatus(row, status) {
-      this.$message({
-        message: '操作成功',
-        type: 'success'
-      })
-      row.status = status
-    },
+    // handleModifyStatus(row, status) {
+    //   this.$message({
+    //     message: '操作成功',
+    //     type: 'success'
+    //   })
+    //   row.status = status
+    // },
     sortChange(data) {
       const { prop, order } = data
       if (prop === 'id') {
@@ -527,12 +530,12 @@ export default {
       })
       this.list.splice(index, 1)
     },
-    handleFetchPv(pv) {
-      fetchPv(pv).then(response => {
-        this.pvData = response.data.pvData
-        this.dialogPvVisible = true
-      })
-    },
+    // handleFetchPv(pv) {
+    //   fetchPv(pv).then(response => {
+    //     this.pvData = response.data.pvData
+    //     this.dialogPvVisible = true
+    //   })
+    // },
     handleDownload() {
       this.downloadLoading = true
       import('@/vendor/Export2Excel').then(excel => {
