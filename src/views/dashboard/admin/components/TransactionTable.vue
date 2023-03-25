@@ -46,6 +46,16 @@ export default {
   },
   methods: {
     fetchData() {
+      // todo 首页的订单表格数据
+      // 数据结构为：
+      // data.item
+      //       {
+      //     "order_no": "D8ec57f6-DA14-64bD-bf7f-db3A48eeE22A",
+      //     "timestamp": 1348085157582,
+      //     "username": "Helen Hall",
+      //     "price": 13084.2,
+      //     "status": "pending"
+      // }
       transactionList().then(response => {
         this.list = response.data.items.slice(0, 8)
       })

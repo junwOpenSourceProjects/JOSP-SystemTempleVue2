@@ -35,6 +35,28 @@
       style="width: 100%;"
       @sort-change="sortChange"
     >
+      <!--todo 数据结构为：
+      {
+    "id": 1,
+    "timestamp": 1012612926311,
+    "author": "Kevin",
+    "reviewer": "Elizabeth",
+    "title": "Nnfj Rluu Gxpt Kinvhg Aercwqh Hrhzidn Dchggbrr",
+    "content_short": "mock data",
+    "content": "<p>I am testing data, I am testing data.</p><p><img src=\"https://wpimg.wallstcn.com/4c69009c-0fd4-4153-b112-6cb53d1cf943\"></p>",
+    "forecast": 48.25,
+    "importance": 1,
+    "type": "JP",
+    "status": "draft",
+    "display_time": "2005-07-28 05:53:21",
+    "comment_disabled": true,
+    "pageviews": 1023,
+    "image_uri": "https://wpimg.wallstcn.com/e4558086-631c-425c-9430-56ffb46e70b3",
+    "platforms": [
+        "a-platform"
+    ]
+}      -->
+
       <el-table-column :label="$t('table.id')" prop="id" sortable="custom" align="center" width="80" :class-name="getSortClass('id')">
         <template slot-scope="{row}">
           <span>{{ row.id }}</span>
@@ -191,9 +213,9 @@ export default {
       listQuery: {
         page: 1,
         limit: 20,
-        importance: undefined,
-        title: undefined,
-        type: undefined,
+        importance: '',
+        title: '',
+        type: '',
         sort: '+id'
       },
       importanceOptions: [1, 2, 3],
@@ -233,7 +255,7 @@ export default {
     getList() {
       this.listLoading = true
       fetchList(this.listQuery).then(response => {
-        this.list = response.data.items
+        this.list = response.data.records
         this.total = response.data.total
 
         // Just to simulate the time of the request

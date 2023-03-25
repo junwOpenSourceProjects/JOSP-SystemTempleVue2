@@ -40,7 +40,7 @@ export default {
     dynamicTable: '动态 Table',
     dragTable: '拖拽 Table',
     inlineEditTable: 'Table 内编辑',
-    complexTable: '综合 Table',
+    complexTable: '综合 Table（完成）',
     tab: 'Tab',
     form: '表单',
     createArticle: '创建文章',

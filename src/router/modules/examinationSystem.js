@@ -8,21 +8,21 @@ const examinationSystemRouter = {
   redirect: '/examinationSystemTable/testTable',
   name: 'examinationSystemTable',
   meta: {
-    title: 'examinationSystemTable',
+    title: '页面sample',
     icon: 'table'
   },
   children: [
-    {
-      path: 'inline-edit-table',
-      component: () => import('@/views/table/inline-edit-table'),
-      name: 'InlineEditTable',
-      meta: { title: 'inlineEditTable' }
-    },
     {
       path: 'testTable',
       component: () => import('@/views/examinationSystemTable/testTable'),
       name: 'testTable',
       meta: { title: 'testTable' }
+    },
+    {
+      path: 'queryAllTable',
+      component: () => import('@/views/examinationSystemTable/queryAllTable.vue'),
+      name: 'queryAllTable',
+      meta: { title: '查询所有表' }
     }
   ]
 }
