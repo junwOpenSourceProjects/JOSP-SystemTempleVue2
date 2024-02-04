@@ -28,7 +28,7 @@
         <el-option
           v-for="item in calendarTypeOptions"
           :key="item.key"
-          :label="item.display_name+'('+item.key+')'"
+          :label="item.display_name + '(' + item.key + ')'"
           :value="item.key"
         />
       </el-select>
@@ -61,7 +61,7 @@
       >
         {{ '导出' }}
       </el-button>
-      <el-checkbox v-model="showReviewer" class="filter-item" style="margin-left:15px;" @change="tableKey=tableKey+1">
+      <el-checkbox v-model="showReviewer" class="filter-item" style="margin-left:15px;" @change="tableKey = tableKey + 1">
         {{ '审核人' }}
       </el-checkbox>
     </div>
@@ -234,10 +234,10 @@
           <!--<el-button v-if="row.status!='draft'" size="mini" @click="handleModifyStatus(row,'draft')">-->
           <!--  {{ $t('table.draft') }}-->
           <!--</el-button>-->
-          <el-button v-if="row.status!='deleted'" size="mini" type="default" @click="handleDelete(row,$index)">
+          <el-button v-if="row.status != 'deleted'" size="mini" type="default" @click="handleDelete(row, $index)">
             {{ '隐藏' }}
           </el-button>
-          <el-button v-if="row.status!='deleted'" size="mini" type="danger" @click="handleDelete(row,$index)">
+          <el-button v-if="row.status != 'deleted'" size="mini" type="danger" @click="handleDelete(row, $index)">
             {{ '删除' }}
           </el-button>
         </template>
@@ -246,7 +246,7 @@
     </el-table>
 
     <pagination
-      v-show="total>0"
+      v-show="total > 0"
       :total="total"
       :page.sync="listQuery.page"
       :limit.sync="listQuery.limit"
@@ -307,7 +307,7 @@
         <el-form-item :label="$t('table.remark')">
           <el-input
             v-model="temp.remark"
-            :autosize="{ minRows: 2, maxRows: 4}"
+            :autosize="{ minRows: 2, maxRows: 4 }"
             type="textarea"
             placeholder="Please input"
           />
@@ -317,7 +317,7 @@
         <el-button @click="dialogFormVisible = false">
           {{ $t('table.cancel') }}
         </el-button>
-        <el-button type="primary" @click="dialogStatus==='create'?createData():updateData()">
+        <el-button type="primary" @click="dialogStatus === 'create' ? createData() : updateData()">
           {{ $t('table.confirm') }}
         </el-button>
       </div>
@@ -336,7 +336,7 @@
 </template>
 
 <script>
-import { fetchMergeDatabaseList,  createArticle, updateArticle } from '@/api/article'
+import { fetchMergeDatabaseList, createArticle, updateArticle } from '@/api/article'
 import waves from '@/directive/waves' // waves directive
 import { parseTime } from '@/utils'
 import Pagination from '@/components/Pagination' // secondary package based on el-pagination

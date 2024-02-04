@@ -11,7 +11,7 @@ import Layout from '@/layout'
 // import chartsRouter from './modules/charts'
 import tableRouter from './modules/table'
 import examinationSystemRouter from '@/router/modules/examinationSystem'
-import classSystemRouter from '@/router/modules/classSystem'
+// import classSystemRouter from '@/router/modules/classSystem'
 // import nestedRouter from './modules/nested'
 
 /**
@@ -203,7 +203,7 @@ export const asyncRoutes = [
   // nestedRouter,
   tableRouter,
   examinationSystemRouter,
-  classSystemRouter,
+  // classSystemRouter,
   // ==============================================================
   //   案例页面
   // ==============================================================
