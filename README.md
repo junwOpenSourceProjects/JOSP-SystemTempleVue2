@@ -1,15 +1,19 @@
-# 🎨 JOSP-SystemTempleVue2 - Vue2系统模板前端
+# 🎨 JOSP-SystemTempleVue2 - vue-element-admin系统前端(Vue2版)
 
 ![Vue](https://img.shields.io/badge/Vue-2.6.14-4FC08D?style=flat-square&logo=vue.js)
-![Element UI](https://img.shields.io/badge/Element%20UI-2.15.14-409EFF?style=flat-square&logo=element)
+![Element UI](https://img.shields.io/badge/Element%20UI-2.13.2-409EFF?style=flat-square&logo=element)
 ![Vuex](https://img.shields.io/badge/Vuex-3.6.2-4FC08D?style=flat-square)
 ![License](https://img.shields.io/badge/License-AGPL--3.0-blue?style=flat-square)
 
-> Vue2前端 - 企业级后台管理系统模板
+> 基于vue-element-admin模板的Vue2前端系统
 
 ## 📖 项目简介
 
-JOSP-SystemTempleVue2 是基于Vue2和Element UI构建的企业级后台管理系统模板,提供完整的权限管理、动态路由和常用业务组件。
+JOSP-SystemTempleVue2 是基于vue-element-admin模板构建的Vue2前端项目,提供企业级后台管理系统的完整解决方案,包含权限管理、动态路由、图表展示等功能。
+
+**后端项目**: [JOSP-SystemTempleJava](../JOSP-SystemTempleJava)
+
+**技术来源**: vue-element-admin (作者: Pan)
 
 ### ✨ 核心特性
 
