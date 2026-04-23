@@ -19,5 +19,20 @@ selenium-debug.log
 *.sln
 *.local
 
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+
 package-lock.json
 yarn.lock
+stats.html
+
+# Environment
+.env
+.env.*.local
+
+# Test coverage
+coverage/
+*.lcov
