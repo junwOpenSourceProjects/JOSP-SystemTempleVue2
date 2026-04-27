@@ -111,5 +111,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wo1261931780.git"
+  },
+  "pnpm": {
+    "overrides": {
+      "axios": "^1.15.2"
+    }
   }
 }
