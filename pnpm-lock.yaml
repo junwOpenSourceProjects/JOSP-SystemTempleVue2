@@ -38,8 +38,8 @@ importers:
         specifier: ^3.2.3
         version: 3.2.3(vue@2.7.16)
       axios:
-        specifier: ^1.15.2
-        version: 1.18.0
+        specifier: 1.20.0
+        version: 1.20.0
       clipboard:
         specifier: 2.0.4
         version: 2.0.4
@@ -1811,8 +1811,8 @@ packages:
   aws4@1.13.2:
     resolution: {integrity: sha512-lHe62zvbTB5eEABUVi/AwVh0ZKY9rMMDhmm+eeyuuUQbQ3+J+fONVQOZyj+DdrvD4BY33uYniyRJ4UJIaSKAfw==}
 
-  axios@1.18.0:
-    resolution: {integrity: sha512-E32NzpYKp++W7XRe52rHiXV2ehxmh3wbdgO7MHeFM+vqxLBYHzt0ElkiImtOBxtOmyp0yoC8C6uESVV84Y2/hw==}
+  axios@1.20.0:
+    resolution: {integrity: sha512-r8aOh8j9cGKpgQAqpzrUHnSIc6a59Y3Xf/cv8sy1DrHCkZHzQGEuoq1tARk6qSyDdtQGSDgpb9kFlruzPvrgwg==}
 
   babel-code-frame@6.26.0:
     resolution: {integrity: sha512-XqYMR2dfdGMW+hd0IUZ2PwK+fGeFkOxZJ0wY+JaQAHzt1Zx8LcvpiZD2NiGkEG8qx0CfkAOr5xt76d1e8vG90g==}
@@ -9890,7 +9890,7 @@ snapshots:
 
   aws4@1.13.2: {}
 
-  axios@1.18.0:
+  axios@1.20.0:
     dependencies:
       follow-redirects: 1.16.0(debug@4.4.3)
       form-data: 4.0.6
@@ -16459,7 +16459,7 @@ snapshots:
   'vue-element-admin@file:':
     dependencies:
       '@toast-ui/vue-editor': 3.2.3(vue@2.7.16)
-      axios: 1.18.0
+      axios: 1.20.0
       clipboard: 2.0.4
       codemirror: 5.58.2
       core-js: 3.6.5
